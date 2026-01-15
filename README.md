@@ -1,101 +1,113 @@
-# TRINETRA — The third eye sees intent, not just input
+# 🔐 TRINETRA  
+### *The third eye sees intent, not just input*
 
 <p align="center">
   <img src="frontend/assets/trinetra-logo.png" alt="Trinetra Logo" width="220">
 </p>
 
-<!-- Add more images/screenshots below as needed -->
+---
+
+## 🖥️ Screenshots
+
 <p align="center">
-  <!-- Example: <img src="assets/demo.png" width="600"> -->
+  <img src="screenshots/screen1.png" width="100%">
+  <img src="screenshots/screen2.png" width="100%">
+  <img src="screenshots/screen3.png" width="100%">
 </p>
 
-## Features
+<p align="center">
+  <img src="screenshots/screen4.png" width="100%">
+    The above screen shows the front page of Trinetra  
 
-- **Multi-layered LLM Security:**  
-  - Prompt injection detection (heuristics + LLM-based)
-  - Real-time input scanning and feedback
-  - Data validation sandbox for external sources
-  - Agentic execution monitoring (code/container safety)
-  - Output safety checks (PII, harmful content)
+  <img src="screenshots/screen5.png" width="100%">
+  <img src="screenshots/screen6.png" width="100%">
+</p>
 
-- **Credible Source Finder:**  
-  - Finds and validates trusted URLs for factual queries
+<p align="center">
+  <img src="screenshots/screen7.png" width="100%">
+  <img src="screenshots/screen8.png" width="100%">
+  <img src="screenshots/screen9.png" width="100%">
+</p>
 
-- **Security Dashboard:**  
-  - Scan logs, threat stats, safe/threat URL lists
+---
 
-- **Preprocessing API:**  
-  - Text, image (OCR), PDF, document, QR/barcode, and URL extraction
+## 🚀 Overview
 
-- **Modern UI:**  
-  - Cyberpunk dark mode, live diagnostics, interactive feedback
+**TRINETRA** is an AI-native security system designed to protect Large Language Model (LLM) applications from **prompt injection**, **jailbreaks**, and **data poisoning attacks**.
 
-## Approach to Prompt Injection & Data Poisoning
+Unlike traditional filters, Trinetra focuses on **intent analysis**, not just keyword matching—providing proactive, layered defense across input, execution, and output stages.
 
-Trinetra uses a layered defense pipeline to secure LLMs:
+---
 
-1. **Instant Detection:**  
-   - Fast regex and keyword filters block known prompt injection and jailbreak patterns.
-2. **LLM-Based Analysis:**  
-   - Groq-powered AI analyzes input for subtle or novel injection attempts, scoring threat levels.
-3. **Sandboxed Data Validation:**  
-   - External data (URLs, documents) are validated in an isolated agent before reaching the main model.
-4. **Agentic Execution Monitoring:**  
-   - Tracks logic flow and safely executes generated code in containers to prevent system compromise.
-5. **Output Safety Checks:**  
-   - Final output is scanned for PII, harmful content, and data poisoning indicators.
-6. **Credible Source Enforcement:**  
-   - Only trusted, authoritative sources are used for factual queries, reducing risk of misinformation.
+## ✨ Features
 
-This multi-layered approach ensures both proactive and reactive protection against prompt injection and data poisoning.
+### 🛡️ Multi-Layered LLM Security
+- Prompt injection detection (heuristics + LLM-based)
+- Real-time input scanning and feedback
+- Data validation sandbox for external sources
+- Agentic execution monitoring (safe code/container execution)
+- Output safety checks (PII, harmful or poisoned content)
 
-## Tech Stack
+### 🔗 Credible Source Finder
+- Identifies and enforces trusted, authoritative URLs
+- Reduces hallucinations and misinformation
 
-- **Backend:** Python, FastAPI, LangChain, Groq API, SQLite
-- **Frontend:** HTML, CSS, JS (no frameworks)
-- **Preprocessing:** pdfplumber, pytesseract, pandas, Pillow
+### 📊 Security Dashboard
+- Scan logs and threat statistics
+- Safe vs malicious input tracking
+- URL classification insights
 
-## Quick Start
+### 🔍 Preprocessing API
+- Text normalization
+- Image OCR
+- PDF & document parsing
+- QR / barcode scanning
+- URL extraction and validation
 
-1. **Clone the repo:**
-    ```bash
-    git clone https://github.com/devikacv001/trinetra.git
-    cd trinetra
-    ```
-2. **Set up environment variables:**  
-   Edit the `.env` file in the project root and add your GROQ_API_KEY (GROQ_API_KEY=your_key).
-3. **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-4. **Run the backend server:**
-    ```bash
-    python main.py
-    ```
-5. **Run the preprocessor API (optional):**
-    ```bash
-    python preprocessor_app.py
-    ```
-6. **Open the frontend:**  
-   Open `index.html` directly in your browser.
+### 🎨 Modern UI
+- Cyberpunk-inspired dark mode
+- Live diagnostics
+- Interactive threat feedback
 
-## For Forks & Contributors
+---
 
-- **Backend:**  
-  - Set up your `.env` file with the required API key.
-  - Start the backend with `python main.py`.
-- **Frontend:**  
-  - No build step required; just open `index.html`.
-  - For local API calls, ensure backend is running on `localhost:8000`.
+## 🧠 Approach to Prompt Injection & Data Poisoning
 
-## API Endpoints
+Trinetra uses a **defense-in-depth pipeline**:
 
-- `/scan` — Full security scan of input
-- `/detect` — Real-time prompt injection check
-- `/logs` — Get scan logs
-- `/metrics` — Get scan statistics
-- `/scan/urls` — Get URL classifications
+1. **Instant Detection**  
+   Regex and pattern-based filters block known jailbreak and injection attempts.
 
-## License
+2. **LLM-Based Analysis**  
+   Groq-powered analysis detects subtle, novel, or obfuscated attacks and assigns threat scores.
 
-© 2026 TRINETRA™. MIT License.
+3. **Sandboxed Data Validation**  
+   External data (URLs, documents) is processed in isolated agents before reaching the main model.
+
+4. **Agentic Execution Monitoring**  
+   Generated logic and code are tracked and safely executed to prevent system compromise.
+
+5. **Output Safety Checks**  
+   Final responses are scanned for PII leaks, harmful content, and poisoned data.
+
+6. **Credible Source Enforcement**  
+   Factual queries are answered only using trusted sources.
+
+This ensures both **proactive prevention** and **reactive containment**.
+
+---
+
+## 🧰 Tech Stack
+
+- **Backend:** Python, FastAPI, LangChain, Groq API, SQLite  
+- **Frontend:** HTML, CSS, JavaScript (no frameworks)  
+- **Preprocessing:** pdfplumber, pytesseract, pandas, Pillow  
+
+---
+
+## ⚡ Quick Start
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/devikacv001/trinetra.git
+cd trinetra
