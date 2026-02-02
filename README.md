@@ -153,7 +153,7 @@ This ensures both **proactive prevention** and **reactive containment**.
 ## 🧰 Tech Stack
 
 - **Backend:** Python, FastAPI, LangChain, Groq API, SQLite  
-- **Frontend:** HTML, CSS, JavaScript (no frameworks)  
+- **Frontend:** HTML, CSS, JavaScript  
 - **Preprocessing:** pdfplumber, pytesseract, pandas, Pillow  
 
 ---
